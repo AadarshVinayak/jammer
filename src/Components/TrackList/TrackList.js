@@ -6,7 +6,6 @@ class TrackList extends React.Component {
   render() {
     return (
       <div class="TrackList">
-        {/*<!-- You will add a map method that renders a set of Track components  -->*/}
         {Array.isArray(this.props.tracks)
           ? this.props.tracks.map((track) => (
               <Track
@@ -17,7 +16,7 @@ class TrackList extends React.Component {
                 isRemoval={this.props.isRemoval}
               />
             ))
-          : console.log(this.props.tracks)}
+          : null}
       </div>
     );
   }

@@ -103,9 +103,9 @@ class App extends React.Component {
     const trackURIs = this.state.playlistTracks.map((track) => track.uir);
   }
 
-  search(term) {
+  async search(term) {
     this.setState({
-      searchResults: Spotify.search(term),
+      searchResults: await Spotify.search(term),
     });
   }
 }
