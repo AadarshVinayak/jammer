@@ -45,11 +45,11 @@ const Spotify = {
       )
       .then((jsonResponse) => {
         if (jsonResponse.tracks) {
-          return jsonResponse.tracks.map((track) => ({
-            id: track.id,
+          return jsonResponse.tracks.items.map((track) => ({
             name: track.name,
             artist: track.artists[0].name,
             album: track.album.name,
+            id: track.id,
             uri: track.uri,
           }));
         } else {
